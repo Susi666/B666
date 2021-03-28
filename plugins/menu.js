@@ -74,29 +74,27 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
 ╭════•›「 ${conn.getName(conn.user.jid)} 」
-╿  Hai, %name !
+╿  Holaa, %name !
 ╿ Total : *%exp XP*
-╿ Tersisa : *%limit Limit*
+╿ Restante : *%limit Limit*
 ╿
-╿ Hari : *%week*
-╿ Tanggal : *%date*
-╿ Waktu : *%time*
-╿ Lama Aktif : *%uptime*
+╿ Dia : *%week*
+╿ Fecha : *%date*
+╿ Tiempo : *%time*
+╿ Duración : *%uptime*
 ╿ Database : %totalreg Nomor
 ╰═══════════════
-
-╭════•›「 Sosmed 」
+╭════•›「 Redes Sociales 」
 ╿ Github :
-╿ https://github.com/Arya274/Arya-BOT3
-╿ Youtube : Drawl Nag
-╿ Instagram : @arpunchs
+╿ No se encuentra disponible
+╿ Youtube : no hay
+╿ Instagram : @susana_monterroza_
 ╰═══════════════
-
-╭════•›「 Rules 」
-╿• Telpon/VC = BAN/BLOKIR
-╿• Spam = BLOKIR
-╿• Ingin Donasi ?
-╿    => Hubungi #creator
+╭════•›「 Reglas 」
+╿• No llames al bot = BAN/BLOQUEO
+╿• Spam = Bloqueo
+╿• Quieres donar ?
+╿    => Usa el comando #creator
 ╰═══════════════
 
 %readmore`
