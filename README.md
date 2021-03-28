@@ -1,4 +1,4 @@
-# sUSI bot
+# Susi bot666
 Simple WhatsApp Bot
 
 ### Instalación
