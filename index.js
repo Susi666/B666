@@ -9,7 +9,7 @@ CFonts.say('DRAWL NAG\nWhatsApp Bot', {
   align: 'center',
   gradient: ['red', 'magenta']
 })
-CFonts.say(`'Drawl Nag BOT' By @${package.author.name || package.author}`, {
+CFonts.say(`'Susi BOT' By @${package.author.name || package.author}`, {
   font: 'console',
   align: 'center',
   gradient: ['red', 'magenta']
