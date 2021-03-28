@@ -34,22 +34,22 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let uptime = clockString(_uptime)
     let totalreg = Object.keys(global.DATABASE._data.users).length
     let tags = {
-      'main': 'Main',
-      'info': 'Info BOT',
+      'main': 'Menu',
+      'info': 'Información del Bot de Susi',
       'xp': 'Exp & Limit',
       'sticker': 'Sticker',
-      'kerang': 'Kerang Ajaib',
-      'quotes': 'Quotes',
+      'kerang': 'Mágico',
+      'quotes': 'Citas',
       'admin': 'Admin',
-      'group': 'Group',
+      'group': 'Grupo',
       'internet': 'Internet',
-      'downloader': 'Downloader',
-      'tools': 'Tools',
+      'downloader': 'Descargas',
+      'tools': 'Herramientas',
       'fun': 'Fun',
-      'jadibot': 'Jadi Bot',
-      'owner': 'Owner',
+      'jadibot': 'Susi Bot',
+      'owner': 'Dueño',
       'host': 'Host',
-      'advanced': 'Advanced',
+      'advanced': 'Avanzado',
       '': 'No Category',
     }
     for (let plugin of Object.values(global.plugins))
