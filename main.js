@@ -71,7 +71,7 @@ if (!opts['test']) setInterval(() => {
   if (JSON.stringify(global.DATABASE.data) == lastJSON) conn.logger.info('Database is up to date')
   else {
     global.DATABASE.save()
-    conn.logger.info('Done saving database,YouTube: Drawl Nag!')
+    conn.logger.info('Ya gil!')
     lastJSON = JSON.stringify(global.DATABASE.data)
   }
 }, 60 * 1000) // Save every minute
@@ -348,14 +348,14 @@ conn.on('close', () => {
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: 'Perintag ini hanya dapat digunakan oleh _*OWWNER!*_',
-    owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
-    mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-    premium: 'Perintah ini hanya untuk member _*Premium*_ !',
-    group: 'Perintah ini hanya dapat digunakan di grup!',
-    private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-    admin: 'Perintah ini hanya untuk *Admin* grup!',
-    botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!'
+    rowner: 'Este mensaje solo puede ser utilizado por _*Susi*_',
+    owner: 'Este comando solo puede ser utilizado por _*Susi*_!',
+    mods: 'Este comando solo puede ser utilizado por _*Moderadores*_ !',
+    premium: '¡Este comando es solo para miembros _*Premium*_!',
+    group: '¡Este comando solo se puede usar en grupos!',
+    private: '¡Este comando solo se puede usar en chats privados!',
+    admin: '¡Este comando es solo para los *Admin*!',
+    botAdmin: '¡Haga del bot *Parte de la realeza (admin)* para usar este comando!'
   }[type]
   if (msg) conn.reply(m.chat, msg, m)
 }
