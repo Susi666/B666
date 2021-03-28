@@ -24,7 +24,7 @@ Simple WhatsApp Bot
 
 Script: @susana_monterroza_
 
-<img src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/Mario_Gameplay.gif"/>
+<img src="https://i.pinimg.com/originals/28/7b/61/287b612d87648274e86c7e12124a2e66.gif"/>
 
 </p>
 
