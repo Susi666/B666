@@ -1,30 +1,29 @@
 let handler  = async (m, { conn, usedPrefix: _p }) => {
   conn.reply(m.chat, `
 ⚠️ *INFO BOT* ⚠️
-Dibuat dengan javascript via NodeJs,Ffmpeg,dan ImageMagick
+Hecho con javascript y modificado por Susi
 
-Rec: Drawl Nag
-Script: @Nurotomo
-Github: 
-https://github.com/Arya274/Arya-BOT3
+Rec: Susi
+Script: Modificado al español por Susi
+Whatsapp de la editora: 
+wa.me/642766660666
 
-*Sosmed :*
-Kritik kami di sosmed ataupun YouTube.
-Instagram: @arpunchs
-➥ YouTube:
-youtube.com/DrawlNag
+*Redes Sociales :*
+Mas redes sociales porque si xd.
+Instagram: @susana_monterroza_
+➥ YouTube ( No tengo pero escuchen este rolón):
+https://youtu.be/KMiDW0g2U0o
 
-*Thanks To :*
-Nurotomo
-MfarelS
-ST4RZ
-Dan kawan yang lain :)
+*Gracias a :*
+El colegio
+Internet
+Traductor Google :)
 
-╠═〘 DONASI 〙 ═
-╠➥ SmartFren: 0882-3543-5804
-╠➥ Tsel: 0813-5730-2007
-╠➥ Indosat: 0815-1586-0089
-║>Request? Wa.me/6281357302007
+╠═〘 DONACIÓN 〙 ═
+╠➥ Numero del bot: +64 27 666 6066
+╠➥ Numero de la creadora: +503 6427 4191
+╠➥ Numero donde paso mas conectada: +679 5484
+║>Dudas? Wa.me/642766660666
 ╠═〘 INFO BOT 〙 ═
 `.trim(), m)
 }
