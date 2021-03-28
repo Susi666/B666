@@ -2,7 +2,7 @@ let limit = 30
 let yts = require('yt-search')
 const { servers, yta, ytv } = require('../lib/y2mate')
 let handler = async (m, { conn, command, text, isPrems, isOwner }) => {
-  if (!text) throw 'Cari apa?'
+  if (!text) throw 'Que estas buscando?'
   let results = await yts(text)
   let vid = results.all.find(video => video.seconds < 3600)
   if (!vid) throw 'Video/Audio Tidak ditemukan'
