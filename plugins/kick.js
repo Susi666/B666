@@ -2,7 +2,7 @@ let handler = async (m, { conn, args }) => {
   let ownerGroup = m.chat.split`-`[0] + '@s.whatsapp.net'
   let users = m.mentionedJid.filter(u => !(u == ownerGroup || u.includes(conn.user.jid)))
   for (let user of users) if (user.endsWith('@s.whatsapp.net')) await conn.groupRemove(m.chat, [user])
-conn.reply(m.chat, '❌ Maaf sementara, fitur ini sedang dimatikan oleh developer ❌', m)
+conn.reply(m.chat, '❌ Lo sentimos, esta función está actualmente deshabilitada por Susi ❌', m)
 }
 handler.help = ['kick', '-'].map(v => v + ' @user')
 handler.tags = ['admin']
