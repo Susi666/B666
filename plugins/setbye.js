@@ -4,7 +4,7 @@ let handler = async (m, { conn, text, isROwner, isOwner }) => {
     else if (isOwner) conn.bye = text
     else global.DATABASE._data.chats.sBye = text
     m.reply('Bye berhasil diatur\n@user (Mention)')
-  } else throw 'Teksnya mana?'
+  } else throw 'Pero escribe lo que quieres que diga gil'
 }
 handler.help = ['setbye <Escribe tu despedida>']
 handler.tags = ['owner', 'group']
