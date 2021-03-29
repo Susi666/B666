@@ -1,44 +1,43 @@
 let handler  = async (m, { conn, usedPrefix: _p }) => {
   conn.reply(m.chat, `
-QUR'AN BOT:
-Via Copas {SEBARKAN}
+Te dejo unas rolitas 
 
 *YouTube:*
-_~Drawl Nag_
 
-Juz 1 ⇨ http://j.mp/2b8SiNO
-Juz 2 ⇨ http://j.mp/2b8RJmQ
-Juz 3 ⇨ http://j.mp/2bFSrtF
-Juz 4 ⇨ http://j.mp/2b8SXi3
-Juz 5 ⇨ http://j.mp/2b8RZm3
-Juz 6 ⇨ http://j.mp/28MBohs
-Juz 7 ⇨ http://j.mp/2bFRIZC
-Juz 8 ⇨ http://j.mp/2bufF7o
-Juz 9 ⇨ http://j.mp/2byr1bu
-Juz 10 ⇨ http://j.mp/2bHfyUH
-Juz 11 ⇨ http://j.mp/2bHf80y
-Juz 12 ⇨ http://j.mp/2bWnTby
-Juz 13 ⇨ http://j.mp/2bFTiKQ
-Juz 14 ⇨ http://j.mp/2b8SUTA
-Juz 15 ⇨ http://j.mp/2bFRQIM
-Juz 16 ⇨ http://j.mp/2b8SegG
-Juz 17 ⇨ http://j.mp/2brHsFz
-Juz 18 ⇨ http://j.mp/2b8SCfc
-Juz 19 ⇨ http://j.mp/2bFSq95
-Juz 20 ⇨ http://j.mp/2brI1zc
-Juz 21 ⇨ http://j.mp/2b8VcBO
-Juz 22 ⇨ http://j.mp/2bFRxNP
-Juz 23 ⇨ http://j.mp/2brItxm
-Juz 24 ⇨ http://j.mp/2brHKw5
-Juz 25 ⇨ http://j.mp/2brImlf
-Juz 26 ⇨ http://j.mp/2bFRHF2
-Juz 27 ⇨ http://j.mp/2bFRXno
-Juz 28 ⇨ http://j.mp/2brI3ai
-Juz 29 ⇨ http://j.mp/2bFRyBF
-Juz 30 ⇨ http://j.mp/2bFREcc
+
+Canción 1 ⇨ https://www.youtube.com/watch?v=Xrywra2AgSU
+Canción 2 ⇨ https://www.youtube.com/watch?v=SOJT4_Z2dYE
+Canción 3 ⇨ https://www.youtube.com/watch?v=EKMbtN008WY
+Canción 4 ⇨ https://www.youtube.com/watch?v=MROasfPsJnM
+Cnación 5 ⇨ https://www.youtube.com/watch?v=wOjzo02Tmck
+Cnación 6 ⇨ https://www.youtube.com/watch?v=tLcfAnN2QgY
+Canción 7 ⇨ https://www.youtube.com/watch?v=4DO8GsIYfhQ
+Canción 8 ⇨ https://www.youtube.com/watch?v=aJOTlE1K90k
+Canción 9 ⇨ https://www.youtube.com/watch?v=ekzHIouo8Q4
+Canción 10 ⇨ https://www.youtube.com/watch?v=SR6iYWJxHqs
+Canción 11 ⇨ https://www.youtube.com/watch?v=QZKrLIoMyxY
+Canción 12 ⇨ https://www.youtube.com/watch?v=weGzdKxLzss
+Canción 13 ⇨ https://www.youtube.com/watch?v=iajZ1R5dIXU
+Canción 14 ⇨ https://www.youtube.com/watch?v=SFQRgTgq1vM
+Canción 15 ⇨ https://www.youtube.com/watch?v=ECUq3tCFhXs
+Canción 16 ⇨ https://www.youtube.com/watch?v=RoayB0pLRC0
+Canción17 ⇨ https://www.youtube.com/watch?v=KEElZdEWz0M
+Canción 18 ⇨ https://www.youtube.com/watch?v=PJYpZ4hkXJE
+Canción 19 ⇨ https://www.youtube.com/watch?v=_Z5-P9v3F8w
+Canción 20 ⇨ https://www.youtube.com/watch?v=CHC6_9j72ro
+Canción 21 ⇨ https://www.youtube.com/watch?v=PDsdKrKohH0
+Canción 22 ⇨ https://www.youtube.com/watch?v=oCoKTTel8KE
+Canción 23 ⇨ https://www.youtube.com/watch?v=W0yp3rSfx3I
+Canción 24 ⇨ https://www.youtube.com/watch?v=q1TIKQwsyrE
+Canción 25 ⇨ https://www.youtube.com/watch?v=7BfNAEK0Gn4
+Canción 26 ⇨ https://www.youtube.com/watch?v=lRWqYR3e7xE
+Canción 27 ⇨ https://www.youtube.com/watch?v=3rgwIp6D3ow
+Canción 28 ⇨ https://www.youtube.com/watch?v=wZRWpr1G1Qw
+Canción 29 ⇨ https://www.youtube.com/watch?v=vGBdcJHA93Y
+Canción 30 ⇨ https://www.youtube.com/watch?v=hcm55lU9knw
 `.trim(), m)
 }
-handler.help = ['murothal']
+handler.help = ['murothal<Para que escuches buena musica>']
 handler.tags = ['quotes']
 handler.command = /^(murothal)$/i
 handler.owner = false
