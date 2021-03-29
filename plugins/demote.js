@@ -2,7 +2,7 @@ let handler = async (m, { conn, args, usedPrefix }) => {
   let users = m.mentionedJid
   for (let user of users) conn.groupDemoteAdmin(m.chat, user).catch(console.log)
 }
-handler.help = ['demote','member','↓'].map(v => v + ' @user')
+handler.help = ['demote','member','↓'].map(v => v + ' <Etiqueta al usuario que le quieres sacar adm>')
 handler.tags = ['admin']
 handler.command = /^(demote|member|↓)$/i
 handler.owner = false
