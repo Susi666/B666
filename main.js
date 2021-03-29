@@ -331,6 +331,7 @@ conn.onDelete = async function (m) {
   if (chat.delete) return
   await this.reply(m.key.remoteJid, `
 Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan
+
 Untuk mematikan fitur ini, ketik
 *.enable delete*
 `.trim(), m.message, {
@@ -455,28 +456,7 @@ fs.watch(path.join(__dirname, 'plugins'), global.reload)
 
 process.on('exit', () => global.DATABASE.save())
 
-case 'play':
-  if (args.length < 1) return reply('Escribe el nombre')
-  reply(mess.wait)
-  play = body.slice(6)
-  try {
-  anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=apivinz`)
-  if (anu.error) return reply(anu.error)
-  infomp3 = `*Audio*\nâ£ *Nombre* : ${anu.result.title}\nâ£ *Fuente* : ${anu.result.source}\nâ£ *TamaÃ±o* : ${anu.result.size}\n\n_El audio se esta mandando, si no llega descargue por el link_\nâ£ *Link* : ${anu.result.url_audio}
-  `
-  buffer = await getBuffer(anu.result.thumbnail)
-  lagu = await getBuffer(anu.result.url_audio)
-  Lxa.sendMessage(from, buffer, image, {
-quoted: mek, caption: infomp3
-  })
-  Lxa.sendMessage(from, lagu, audio, {
-mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek
-  })
-  
-  } catch {
-    reply(mess.ferr)
-  }
-  break
+
 
 // Quick Test
 let ffmpeg = spawnSync('ffmpeg')
@@ -492,3 +472,4 @@ Object.freeze(global.support)
 if (!global.support.ffmpeg) conn.logger.warn('Please install ffmpeg for sending videos (pkg install ffmpeg)')
 if (!global.support.ffmpegWebp) conn.logger.warn('Stickers may not animated without libwebp on ffmpeg (--emable-ibwebp while compiling ffmpeg)')
 if (!global.support.convert) conn.logger.warn('Stickers may not work without imagemagick if libwebp on ffmpeg doesnt isntalled (pkg install imagemagick)')
+
