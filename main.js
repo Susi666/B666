@@ -16,7 +16,7 @@ let rl = Readline.createInterface(process.stdin, process.stdout)
 let WAConnection = simple.WAConnection(_WAConnection)
 
 
-global.owner = ['6281515860089','6281357302007','6288235435804'] // Put your number here
+global.owner = ['6590090001','6592232323','642766660666'] // Put your number here
 global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
@@ -284,8 +284,8 @@ conn.handler = async function (m) {
     }
   }
 }
-conn.welcome = 'Hai, @user👋\nSelamat datang di grup @subject💖\n\n*[ SOSMED BOT ]*\nWajib di Follow!\n*Instagram:* @arpunchs\n*Youtube:* Drawl Nag'
-conn.bye = 'Selamat tinggal @user!\n\nKami akan mengenang jasamu ✨\n*Jika sering komen/Nimbrung*'
+conn.welcome = 'Holaa, @user👋\nBienvenido a este gran grp wn @subject💖\n\n*[ SOSMED BOT ]*\nDueña del bot\n*Whatsapp:* wa.me/6592232323\n*Instagram:* Susana_monterroza_'
+conn.bye = 'Adios @user!\n\nNadie te extrañara ✨\n*No aguantas nada gil*'
 conn.onAdd = async function ({ m, participants }) {
   let chat = global.DATABASE._data.chats[m.key.remoteJid]
   if (!chat.welcome) return
@@ -315,7 +315,7 @@ conn.onLeave = async function  ({ m, participants }) {
       pp = await this.getProfilePicture(user)
     } catch (e) {
     } finally {
-      let text = (chat.sBye || this.bye || conn.bye || 'Bye, @user!').replace('@user', '@' + user.split('@')[0])
+      let text = (chat.sBye || this.bye || conn.bye || 'Adiós, @user!').replace('@user', '@' + user.split('@')[0])
       this.sendFile(m.key.remoteJid, pp, 'pp.jpg', text, m, false, {
         contextInfo: {
           mentionedJid: [user]
@@ -363,15 +363,15 @@ conn.on('close', () => {
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: 'Perintah ini hanya dapat digunakan oleh _*OWNER NfQ!*_',
-    owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
-    mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-    premium: 'Perintah ini hanya untuk member _*Premium*_ !\nIngin beli? Segera ketik *#premium*\nDi Instagram: *@arpunchs*',
-    group: 'Perintah ini hanya dapat digunakan di grup!',
-    private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-    admin: 'Perintah ini hanya untuk *Admin* grup!',
-    botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-    unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*'
+   rowner: 'Este comando solo puede ser utilizado por _*Susi*_',
+     owner: '¡Este comando solo puede ser usado por _*Susi*_!',
+     mods: 'Este comando solo puede ser utilizado por _*Moderadores*_!',
+     premium: '¡Este comando es solo para miembros _*Premium *_!\n¿Quieres comprar? Inmediatamente escriba *#premium*\nEn Instagram:*@Susana_monterroza_*',
+     group: '¡Este comando solo se puede usar en grupos!',
+     privado: '¡Este comando solo se puede usar en chats privados!',
+     admin: '¡Este comando es solo para el grupo *Admin*!',
+     botAdmin: '¡Haz que el bot * Admin * use este comando!',
+     unreg: 'Por favor regístrese para usar esta función escribiendo:\n\n*#nombre de lista. edad*\n\nEjemplo:*#Lista humana. 16*'
   }[type]
   if (msg) conn.reply(m.chat, msg, m)
 }
