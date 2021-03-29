@@ -19,7 +19,7 @@ Link: https://wa.me/${who.split`@`[0]}
     conn.sendFile(m.chat, pp, 'pp.jpg', str, m, false, { contextInfo: { mentionedJid }})
   }
 }
-handler.help = ['profile [@user]']
+handler.help = ['profile [Escribe el usuario de la persona]']
 handler.tags = ['tools']
 handler.command = /^profile$/i
 module.exports = handler
