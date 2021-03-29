@@ -27,10 +27,10 @@ let handler = async (m, { conn, text }) => {
     m.reply(`*${format}* = _${result}_`)
   } catch (e) {
     if (e == undefined) throw 'Isinya?'
-    throw 'Format salah, hanya 0-9 dan Simbol -, +, *, /, ×, ÷, π, e, (, ) yang disupport'
+    throw 'Formato inválido, Simbolos permitidos: -, +, *, /, ×, ÷, π, e, (, )'
   }
 }
-handler.help = ['calc <expression>']
+handler.help = ['calc <Resuelve ejercicios no tan culeros>']
 handler.tags = ['tools']
 handler.command = /^(calc(ulat(e|or))?|kalk(ulator)?)$/i
 handler.exp = 5
