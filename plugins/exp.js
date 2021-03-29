@@ -1,11 +1,11 @@
 let { MessageType } = require('@adiwajshing/baileys')
 let pajak = 0.02
 let handler = async (m, { conn, text }) => {
-  if (!text) throw 'Masukkan jumlah exp yang akan diberi'
+  if (!text) throw 'Ingrese la cantidad de exp que se dará'
   let who
   if (m.isGroup) who = m.mentionedJid[0]
   else who = m.chat
-  if (!who) throw 'Tag salah satu lah'
+  if (!who) throw 'etiqueta a uno'
   let txt = text.replace('@' + who.split`@`[0], '').trim()
   if (isNaN(txt)) throw 'Hanya angka'
   let xp = parseInt(txt)
@@ -21,7 +21,7 @@ let handler = async (m, { conn, text }) => {
   m.reply(`(${-xp} XP) + (${-pjk} XP (Pajak 2%)) = ( ${-exp} XP)`)
   conn.fakeReply(m.chat, `+${xp} XP`, who, m.text)
 }
-handler.help = ['exp <jumlah>']
+handler.help = ['exp <Pon el monto que quieres>']
 handler.tags = ['xp']
 handler.command = /^exp$/i
 handler.owner = true
