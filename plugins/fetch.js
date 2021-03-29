@@ -12,7 +12,7 @@ let handler = async (m, { text }) => {
     m.reply(txt.slice(0, 65536) + '')
   }
 }
-handler.help = ['fetch', 'get'].map(v => v + ' <url>')
+handler.help = ['fetch', 'get'].map(v => v + ' <pega la url y mira la magia>')
 handler.tags = ['internet']
 handler.command = /^(fetch|get)$/i
 
