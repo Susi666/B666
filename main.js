@@ -2,7 +2,7 @@ let { WAConnection: _WAConnection, WA_MESSAGE_STUB_TYPES } = require('@adiwajshi
 let { generate } = require('qrcode-terminal')
 let qrcode = require('qrcode')
 let simple = require('./lib/simple')
-let logs = require('./lib/logs')
+//  let logs = require('./lib/logs')
 let yargs = require('yargs/yargs')
 let syntaxerror = require('syntax-error')
 let fetch = require('node-fetch')
@@ -16,7 +16,7 @@ let rl = Readline.createInterface(process.stdin, process.stdout)
 let WAConnection = simple.WAConnection(_WAConnection)
 
 
-global.owner = ['6281515860089','6288235435804','6281357302007'] // Put your number here
+global.owner = ['6281515860089','6281357302007','6288235435804'] // Put your number here
 global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
@@ -34,7 +34,7 @@ global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.
 global.timestamp = {
   start: new Date
 }
-global.LOGGER = logs()
+// global.LOGGER = logs()
 const PORT = process.env.PORT || 3000
 let opts = yargs(process.argv.slice(2)).exitProcess(false).parse()
 global.opts = Object.freeze({...opts})
@@ -71,7 +71,7 @@ if (!opts['test']) setInterval(() => {
   if (JSON.stringify(global.DATABASE.data) == lastJSON) conn.logger.info('Database is up to date')
   else {
     global.DATABASE.save()
-    conn.logger.info('Ya gil!')
+    conn.logger.info('Done saving database!')
     lastJSON = JSON.stringify(global.DATABASE.data)
   }
 }, 60 * 1000) // Save every minute
@@ -80,7 +80,7 @@ const isNumber = x => typeof x === 'number' && !isNaN(x)
 conn.handler = async function (m) {
   try {
   	simple.smsg(this, m)
-    m.exp = 2
+    m.exp = 0
     m.limit = false
     try {
       let user
@@ -88,10 +88,20 @@ conn.handler = async function (m) {
         if (!isNumber(user.exp)) user.exp = 0
         if (!isNumber(user.limit)) user.limit = 10
         if (!isNumber(user.lastclaim)) user.lastclaim = 0
+        if (!'registered' in user) user.registered = false
+        if (!user.registered) {
+          if (!'name' in user) user.name = this.getName(m.sender)
+          if (!isNumber(user.age)) user.age = -1
+          if (!isNumber(user.regTime)) user.regTime = -1
+        }
       } else global.DATABASE._data.users[m.sender] = {
         exp: 0,
-        limit: 25,
+        limit: 20,
         lastclaim: 0,
+        registered: false,
+        name: conn.getName(m.sender),
+        age: -1,
+        regTime: -1,
       }
       
       let chat
@@ -117,10 +127,11 @@ conn.handler = async function (m) {
     m.exp += 1
     
   	let usedPrefix
+    let user = global.DATABASE._data.users[m.sender]
   	for (let name in global.plugins) {
   	  let plugin = global.plugins[name]
       if (!plugin) continue
-      if (plugin.tags && plugin.tags.includes('admin')) continue
+      if (!opts['restrict']) if (plugin.tags && plugin.tags.includes('admin')) continue
       let _prefix = plugin.customPrefix ? plugin.customPrefix : conn.prefix ? conn.prefix : global.prefix
   	  if ((usedPrefix = (_prefix.exec(m.text) || '')[0])) {
         let noPrefix = m.text.replace(usedPrefix, '')
@@ -151,8 +162,8 @@ conn.handler = async function (m) {
         let participants = m.isGroup ? groupMetadata.participants : []
         let user = m.isGroup ? participants.find(u => u.jid == m.sender) : {} // User Data
         let bot = m.isGroup ? participants.find(u => u.jid == this.user.jid) : {} // Your Data
-        let isAdmin = user.isAdmin || user.isSuperAdmin || true // Is User Admin?
-        let isBotAdmin = bot.isAdmin || bot.isSuperAdmin || true // Are you Admin?
+        let isAdmin = user.isAdmin || user.isSuperAdmin || false // Is User Admin?
+        let isBotAdmin = bot.isAdmin || bot.isSuperAdmin || false // Are you Admin?
         if (m.chat in global.DATABASE._data.chats) {
           let chat = global.DATABASE._data.chats[m.chat]
           if (name != 'unbanchat.js' && chat && chat.isBanned) return // Except this
@@ -191,13 +202,17 @@ conn.handler = async function (m) {
           fail('private', m, this)
           continue
         }
+        if (plugin.register && user.registered == false) { // Butuh daftar?
+          fail('unreg', m, this)
+          continue
+        }
 
         m.isCommand = true
         let xp = 'exp' in plugin ? parseInt(plugin.exp) : 9 // XP Earning per command
         if (xp > 99) m.reply('Ngecit -_-') // Hehehe
         else m.exp += xp
         if (!isPrems && global.DATABASE._data.users[m.sender].limit < m.limit * 1 && plugin.limit) {
-          this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
+          this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy* atau bisa juga beli Limit di *#premium*`, m)
           continue // Limit habis
         }
         try {
@@ -224,7 +239,7 @@ conn.handler = async function (m) {
           console.log(e)
           if (e) m.reply(util.format(e))
         } finally {
-          if (m.limit) m.reply(+ m.limit + ' Limit terpakai, Mangkane ojok nyepam.. isok ae" boros paketan')
+          if (m.limit) m.reply(+ m.limit + ' Limit terpakai, mangkane ojok nyepam isok ae" boros paketan')
         }
   			break
   		}
@@ -269,8 +284,8 @@ conn.handler = async function (m) {
     }
   }
 }
-conn.welcome = 'Hai, @user!\nSelamat datang di grup @subject\n\nJika sudah bantu follow kami..\nDi *Instagram:* @arpunchs\nDan Youtube: *Drawl Nag*'
-conn.bye = 'Selamat tinggal @user!'
+conn.welcome = 'Hai, @user👋\nSelamat datang di grup @subject💖\n\n*[ SOSMED BOT ]*\nWajib di Follow!\n*Instagram:* @arpunchs\n*Youtube:* Drawl Nag'
+conn.bye = 'Selamat tinggal @user!\n\nKami akan mengenang jasamu ✨\n*Jika sering komen/Nimbrung*'
 conn.onAdd = async function ({ m, participants }) {
   let chat = global.DATABASE._data.chats[m.key.remoteJid]
   if (!chat.welcome) return
@@ -348,14 +363,15 @@ conn.on('close', () => {
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: 'Este mensaje solo puede ser utilizado por _*Susi*_',
-    owner: 'Este comando solo puede ser utilizado por _*Susi*_!',
-    mods: 'Este comando solo puede ser utilizado por _*Moderadores*_ !',
-    premium: '¡Este comando es solo para miembros _*Premium*_!',
-    group: '¡Este comando solo se puede usar en grupos!',
-    private: '¡Este comando solo se puede usar en chats privados!',
-    admin: '¡Este comando es solo para los *Admin*!',
-    botAdmin: '¡Haga del bot *Parte de la realeza (admin)* para usar este comando!'
+    rowner: 'Perintah ini hanya dapat digunakan oleh _*OWNER NfQ!*_',
+    owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
+    mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
+    premium: 'Perintah ini hanya untuk member _*Premium*_ !\nIngin beli? Segera ketik *#premium*\nDi Instagram: *@arpunchs*',
+    group: 'Perintah ini hanya dapat digunakan di grup!',
+    private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
+    admin: 'Perintah ini hanya untuk *Admin* grup!',
+    botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
+    unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*'
   }[type]
   if (msg) conn.reply(m.chat, msg, m)
 }
@@ -456,4 +472,3 @@ Object.freeze(global.support)
 if (!global.support.ffmpeg) conn.logger.warn('Please install ffmpeg for sending videos (pkg install ffmpeg)')
 if (!global.support.ffmpegWebp) conn.logger.warn('Stickers may not animated without libwebp on ffmpeg (--emable-ibwebp while compiling ffmpeg)')
 if (!global.support.convert) conn.logger.warn('Stickers may not work without imagemagick if libwebp on ffmpeg doesnt isntalled (pkg install imagemagick)')
-
