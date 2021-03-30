@@ -17,7 +17,7 @@ let handler = async (m, { conn, args }) => {
     conn.sendFile(m.chat, res, 'tts.opus', null, m, true)
   }
 }
-handler.help = ['tts <Escribe algo y el bot lo repetirá>']
+handler.help = ['tts ᴱˢᶜʳᶦᵇᵉ ᵃˡᵍᵒ ʸ ᵉˡ ᵇᵒᵗ ˡᵒ ʳᵉᵖᵉᵗᶦʳᵃ']
 handler.tags = ['tools']
 handler.command = /^g?tts$/i
 module.exports = handler
