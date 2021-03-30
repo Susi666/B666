@@ -5,7 +5,7 @@ let handler  = async (m, { conn, text }) => {
   } : {})
   conn.reply(m.chat, `_Enviar mensaje de difusión a ${chats.length} chat_`, m)
 }
-handler.help = ['broadcast','bc'].map(v => v + ' <Mensaje de difusión>')
+handler.help = ['broadcast','bc'].map(v => v + ' ᴹᵉⁿˢᵃʲᵉ ᵈᵉ ᵈᶦᶠᵘˢᶦᵒⁿ')
 handler.tags = ['owner']
 handler.command = /^(broadcast|bc)$/i
 handler.owner = true
