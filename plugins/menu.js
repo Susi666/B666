@@ -34,23 +34,23 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let uptime = clockString(_uptime)
     let totalreg = Object.keys(global.DATABASE._data.users).length
     let tags = {
-      'main': 'Menu',
-      'info': 'Información del Bot de Susi',
-      'xp': 'Exp & Limit',
-      'sticker': 'Sticker',
-      'kerang': 'Mágico',
-      'quotes': 'Citas',
-      'admin': 'Admin',
-      'group': 'Grupo',
-      'internet': 'Internet',
-      'downloader': 'Descargas',
-      'tools': 'Herramientas',
-      'fun': 'Fun',
-      'jadibot': 'Susi Bot',
-      'owner': 'Dueño',
-      'host': 'Host',
-      'advanced': 'Avanzado',
-      '': 'No Category',
+      'main': '🎉Menu🎉',
+      'info': '🤖Información del Bot de Susi🤖',
+      'xp': '📉Exp & Limit📉',
+      'sticker': '🎃Sticker🎃',
+      'kerang': '✨Mágico✨',
+      'quotes': '✍🏼Citas✍🏼',
+      'admin': '👑Admin👑',
+      'group': '🌚Grupo🌝',
+      'internet': '💥Internet💥',
+      'downloader': '📥Descargas📥',
+      'tools': '🛠Herramientas🛠',
+      'fun': '🎭Fun🎭',
+      'jadibot': '🥵Susi Bot🥵',
+      'owner': '😈Dueño😈',
+      'host': '⚡Host⚡',
+      'advanced': '☠️Avanzado☠️',
+      '': '📍NoAi📍',
     }
     for (let plugin of Object.values(global.plugins))
       if (plugin && 'tags' in plugin)
@@ -74,7 +74,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
 ╭════•›「 ${conn.getName(conn.user.jid)} 」
-╿  Holaa, %name !
+╿  😎Holaa, %name !
 ╿ Total : *%exp XP*
 ╿ Restante : *%limit Limit*
 ╿
@@ -84,10 +84,10 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ╿ Duración : *%uptime*
 ╿ Database : %totalreg Nomor
 ╰═══════════════
-╭════•›「 Redes Sociales 」
+╭════•›「 Redes Sociales  」
 ╿ Github :
 ╿ No se encuentra disponible
-╿ Youtube : no hay
+╿ Youtube : no hay 
 ╿ Instagram : @susana_monterroza_
 ╰═══════════════
 ╭════•›「 Reglas 」
