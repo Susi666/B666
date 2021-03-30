@@ -6,7 +6,7 @@ let handler = async (m, { conn, text }) => {
     }
   })
 }
-handler.help = ['mention <teks>']
+handler.help = ['mention ᴱˢᶜʳᶦᵇᵉ']
 handler.tags = ['tools']
 
 handler.command = /^mentiin$/i
