@@ -30,7 +30,7 @@ let handler = async (m, { conn, text }) => {
     throw 'Formato inválido, Simbolos permitidos: -, +, *, /, ×, ÷, π, e, (, )'
   }
 }
-handler.help = ['calc <Resuelve ejercicios no tan culeros>']
+handler.help = ['calc ᴿᵉˢᵘᵉˡᵛᵉ ᵉʲᵉʳᶜᶦᶜᶦᵒˢ ⁿᵒ ᵗᵃⁿ ᶜᵘˡᵉʳᵒˢ']
 handler.tags = ['tools']
 handler.command = /^(calc(ulat(e|or))?|kalk(ulator)?)$/i
 handler.exp = 5
