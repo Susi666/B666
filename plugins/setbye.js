@@ -6,7 +6,7 @@ let handler = async (m, { conn, text, isROwner, isOwner }) => {
     m.reply('Bye berhasil diatur\n@user (Mention)')
   } else throw 'Pero escribe lo que quieres que diga gil'
 }
-handler.help = ['setbye <Escribe tu despedida>']
+handler.help = ['setbye ᴱˢᶜʳᶦᵇᵉ ᵗᵘ ᵈᵉˢᵖᵉᵈᶦᵈᵃ']
 handler.tags = ['owner', 'group']
 
 handler.command = /^setbye$/i
