@@ -239,7 +239,7 @@ conn.handler = async function (m) {
           console.log(e)
           if (e) m.reply(util.format(e))
         } finally {
-          if (m.limit) m.reply(+ m.limit + ' Limit terpakai, mangkane ojok nyepam isok ae" boros paketan')
+          if (m.limit) m.reply(+ m.limit + ' Se aplican límites disfruta inútil')
         }
   			break
   		}
@@ -284,7 +284,7 @@ conn.handler = async function (m) {
     }
   }
 }
-conn.welcome = 'Holaa, @user👋\nBienvenido a este gran grp wn @subject💖\n\n*[ SOSMED BOT ]*\nDueña del bot\n*Whatsapp:* wa.me/6592232323\n*Instagram:* Susana_monterroza_'
+conn.welcome = 'Holaa, @user👋\nBienvenido a este gran grp wn @subject💖\n\n[ Redes Sociales de SUSI ]\nDueña del bot\nWhatsapp: wa.me/6592232323 wa.me/50364274191\nInstagram: Susana_monterroza_'
 conn.bye = 'Adios @user!\n\nNadie te extrañara ✨\n*No aguantas nada gil*'
 conn.onAdd = async function ({ m, participants }) {
   let chat = global.DATABASE._data.chats[m.key.remoteJid]
