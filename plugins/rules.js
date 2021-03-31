@@ -10,7 +10,7 @@ Términos y condiciones de Bot * ESA. *
 7. Cualquier cosa que pidas en este bot, NO SEREMOS RESPONSABLES!
 
 Gracias y que disfrutes el bot!
-2021©Drawl Nag
+2021©Susi BOT
 `.trim(), m)
 }
 handler.help = ['rules']
