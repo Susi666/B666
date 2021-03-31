@@ -7,7 +7,7 @@ let handler = async (m, { conn, text }) => {
     conn.reply(m.chat, `_Se envió con éxito la transmisión al ${users.length} que se convirtió en bot_`, m)
   } else conn.reply(m.chat, 'Fitur ini hanya untuk host bot',  m)
 }
-handler.help = ['broadcastjadibot','bcbot'].map(v => v + ' <Deja ese comando para el dueño del bot>')
+handler.help = ['broadcastjadibot','bcbot'].map(v => v + ' ᴰᵉʲᵃ ᵉˢᵉ ᶜᵒᵐᵃⁿᵈᵒ ᵖᵃʳᵃ ᵉˡ ᵈᵘᵉⁿ̃ᵒ ᵈᵉˡ ᵇᵒᵗ')
 handler.tags = ['host']
 handler.command = /^(broadcast|bc)(jadi)?bot$/i
 handler.owner = true
