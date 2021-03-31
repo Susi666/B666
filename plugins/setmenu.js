@@ -3,10 +3,10 @@ let handler  = async (m, { conn, command, text }) => {
   if (type == '') {
     if (text) {
       conn.menu = text
-      conn.reply(m.chat, 'Menu berhasil diatur\n' + info, m)
+      conn.reply(m.chat, 'Menú configurado correctamente\n' + info, m)
     } else {
       conn.menu = {}
-      conn.reply(m.chat, 'Menu direset', m)
+      conn.reply(m.chat, 'El menú se reiniciara', m)
     }
   } else {
     conn.menu = typeof conn.menu == 'object' ? conn.menu : {}
@@ -40,23 +40,23 @@ Universal:
 %% (%)
 %p (Prefix)
 %exp (Exp)
-%limit (Limit)
-%name (Nama)
-%weton (Weton Hari ini)
-%week (Hari)
-%date (Tanggal)
-%time (Jam)
-%uptime (Uptime Bot)
-%totalreg (Jumlah User yang ada di database)
+%limit (Limite)
+%name (Nombre)
+%weton (No c)
+%week (Dia)
+%date (Fecha)
+%time (Tiempo)
+%uptime (Tiempo del bot)
+%totalreg (El número de usuarios en la base de datos.)
 %npmname
 %npmdesc
 %version
 %github
 
-Bagian Menu Header & Footer:
-%category (Kategori)
+Sección de menú de encabezado y pie de página:
+%category (Categoría)
 
-Bagian Menu Body:
-%cmd (Command)
-%islimit (Jika command di limit)
+Sección del cuerpo del menú:
+%cmd (Comando)
+%islimit (Si el comando es limitado)
 `.trim()
