@@ -83,6 +83,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ╿ Tiempo : *%time*
 ╿ Duración : *%uptime*
 ╿ Database : %totalreg Nomor
+  Me a costado un pijo asi que usa bien el bot
 ╰═══════════════
 ╭════•›「 Redes Sociales  」
 ╿ Github :
