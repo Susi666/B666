@@ -13,7 +13,7 @@ Gracias y que disfrutes el bot!
 2021©Susi BOT
 `.trim(), m)
 }
-handler.help = ['rules']
+handler.help = ['rules ᴸᵉᵉˡᵃˢ ᵖᵒʳᶠᵃᵛᵒʳ']
 handler.tags = ['info']
 handler.command = /^(rules)$/i
 handler.owner = false
