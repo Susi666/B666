@@ -7,7 +7,7 @@ let handler = async (m, { conn, command, args }) => {
   }
   conn.reply(m.chat, chats.length + ' El chat grupal se a borrado' + (isDelete ? 'limpiar' : 'ya'), m)
 }
-handler.help = ['deletechat', 'deletechat group', 'mutechat', 'mutechat group']
+handler.help = ['deletechat ᴱˢᵗᵉ ᶜᵒᵐᵃⁿᵈᵒ ᵉˢ ᵉˣᶜˡᵘˢᶦᵛᵒ ᵖᵃʳᵃ ᵉˡ ᵇᵒᵗ', 'deletechat group ᴱˢᵗᵉ ᶜᵒᵐᵃⁿᵈᵒ ᵉˢ ᵉˣᶜˡᵘˢᶦᵛᵒ ᵖᵃʳᵃ ᵉˡ ᵇᵒᵗ', 'mutechat ᴱˢᵗᵉ ᶜᵒᵐᵃⁿᵈᵒ ᵉˢ ᵉˣᶜˡᵘˢᶦᵛᵒ ᵖᵃʳᵃ ᵉˡ ᵇᵒᵗ', 'mutechat group ᴱˢᵗᵉ ᶜᵒᵐᵃⁿᵈᵒ ᵉˢ ᵉˣᶜˡᵘˢᶦᵛᵒ ᵖᵃʳᵃ ᵉˡ ᵇᵒᵗ']
 handler.tags = ['owner']
 handler.command = /^(clear|delete|mute)chat$/i
 handler.owner = true
