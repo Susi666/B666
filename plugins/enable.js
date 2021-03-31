@@ -19,7 +19,7 @@ ${usedPrefix}disable welcome
 `.trim())
   }
   m.reply(`
-*${type}* exitoso en *${isEnable ? 'apagar' : 'on'}off* para este chat
+*${type}* exitoso en *${isEnable ? 'apagar' : 'on'|off* para este chat
 `.trim())
 }
 handler.help = ['en', 'dis'].map(v => v + 'able ᴬᶜᵗᶦᵛᵃ ˡᵃ ᵇᶦᵉⁿᵛᵉⁿᶦᵈᵃ ᵐᵃˡᵉᵈᵘᶜᵃᵈᵒ')
