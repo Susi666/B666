@@ -5,6 +5,6 @@ let handler = async (m, { command, text }) => {
 }
 handler.help = [...'aeiou'].map(v => `h${v}l${v}h ᴺᵒ ˢᵉ ᑫᵘᵉ ᵐᶦᵉʳᵈᵃ ʰᵃᶜᵉ`)
 handler.tags = ['tools']
-handler.command = /^h([aiueo])l\1h/i
+handler.command = /^h([aeiou])l\1h/i
 
 module.exports = handler
