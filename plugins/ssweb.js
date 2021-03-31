@@ -6,7 +6,7 @@ let handler = async (m, { conn, command, args }) => {
   let ss = await (await fetch(global.API('nrtm', '/api/ssweb', { delay: 1000, url, full }))).buffer()
   conn.sendFile(m.chat, ss, 'screenshot.png', url, m)
 }
-handler.help = ['ss', 'ssf'].map(v => v + ' <Estoy en reparación no uses este comando>')
+handler.help = ['ss', 'ssf'].map(v => v + ' ᴱˢᵗᵒʸ ᵉⁿ ʳᵉᵖᵃʳᵃᶜᶦᵒ́ⁿ ⁿᵒ ᵘˢᵉˢ ᵉˢᵗᵉ ᶜᵒᵐᵃⁿᵈᵒ')
 handler.tags = ['internet']
 handler.command = /^ss(web)?f?$/i
 handler.owner = false
