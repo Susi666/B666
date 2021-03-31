@@ -20,7 +20,7 @@ let handler = async (m, { conn, text }) => {
   conn.fakeReply(m.chat, `+${xp} Limit`, who, m.text)
 }
 module.exports = handler
-handler.help = ['limit <jumlah>']
+handler.help = ['limit ᴱˢᶜʳᶦᵇᵃ ᵉˡ ᵐᵒⁿᵗᵒ']
 handler.tags = ['owner']
 handler.command = /^limit$/i
 handler.owner = true
