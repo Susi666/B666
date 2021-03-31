@@ -5,7 +5,7 @@ let handler = async m => m.reply(`
 │ • Antes Que Se Acabe
 ╰────
 ╭─「 Mi número por si quieres chambrear 」
-│ > Wa.me/50379619339
+│ > Wa.me/50373619339
 ╰────
 
 No c que poner acá :v
