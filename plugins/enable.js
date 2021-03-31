@@ -22,7 +22,7 @@ ${usedPrefix}disable welcome
 *${type}* exitoso en *${isEnable ? 'apagar' : 'on'}off* para este chat
 `.trim())
 }
-handler.help = ['en', 'dis'].map(v => v + 'able <Activa la bienvenida maleducado>')
+handler.help = ['en', 'dis'].map(v => v + 'able ᴬᶜᵗᶦᵛᵃ ˡᵃ ᵇᶦᵉⁿᵛᵉⁿᶦᵈᵃ ᵐᵃˡᵉᵈᵘᶜᵃᵈᵒ')
 handler.tags = ['group', 'owner']
 handler.command = /^((en|dis)able|(tru|fals)e|(turn)?o(n|ff))$/i
 
