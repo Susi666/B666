@@ -4,8 +4,8 @@ let handler = async m => m.reply(`
 │ • Canción Con Yandel
 │ • Antes Que Se Acabe
 ╰────
-╭─「 Mi número 」
-│ > Wa.me/50364274191
+╭─「 Mi número por si quieres chambrear 」
+│ > Wa.me/50379619339
 ╰────
 
 No c que poner acá :v
