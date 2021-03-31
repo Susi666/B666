@@ -37,7 +37,7 @@ Canción 29 ⇨ https://www.youtube.com/watch?v=vGBdcJHA93Y
 Canción 30 ⇨ https://www.youtube.com/watch?v=hcm55lU9knw
 `.trim(), m)
 }
-handler.help = ['murothal<Para que escuches buena musica>']
+handler.help = ['murothal ᴾᵃʳᵃ ᑫᵘᵉ ᵉˢᶜᵘᶜʰᵉˢ ᵇᵘᵉⁿᵃ ᵐᵘˢᶦᶜᵃ']
 handler.tags = ['quotes']
 handler.command = /^(murothal)$/i
 handler.owner = false
