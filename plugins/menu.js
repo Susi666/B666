@@ -83,8 +83,11 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ╿ Tiempo : *%time*
 ╿ Duración : *%uptime*
 ╿ Database : %totalreg Nomor
-  Me a costado un pijo asi que usa bien el bot
+╿ Me a costado un pijo asi que usa bien el bot
 ╰═══════════════
+┎────« 🌗 »────┒
+ +503 6427 4191
+ ┖─────«»─────┚
 ╭════•›「 Redes Sociales  」
 ╿ Github :
 ╿ No se encuentra disponible
@@ -97,6 +100,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ╿• Quieres donar ?
 ╿    => Usa el comando #creator
 ╰═══════════════
+• < 🌟 ≫───•◦Comandos del BOT◦•───≪ 🌟 > •
 
 %readmore`
     let header = conn.menu.header || '╭════•›「 %category 」'
