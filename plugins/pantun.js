@@ -1,7 +1,7 @@
 let handler  = async (m, { conn }) => {
   conn.reply(m.chat,`“${pickRandom(global.pantun)}”`, m)
 }
-handler.help = ['pantun <Frases que robe de canciones xd>']
+handler.help = ['pantun ᶠʳᵃˢᵉˢ ᑫᵘᵉ ʳᵒᵇᵉ ᵈᵉ ᶜᵃⁿᶜᶦᵒⁿᵉˢ ˣᵈ']
 handler.tags = ['quotes']
 handler.command = /^(pantun)$/i
 handler.owner = false
