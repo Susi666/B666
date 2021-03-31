@@ -22,8 +22,8 @@ Traductor Google :)
 ╠═〘 DONACIÓN 〙 ═
 ╠➥ Numero del bot: +64 27 666 6066
 ╠➥ Numero de la creadora: +503 6427 4191
-╠➥ Numero donde paso mas conectada: +679 5484
-║>Dudas? Wa.me/642766660666
+╠➥ Numero donde paso mas conectada: +503 7361 9339
+║>Dudas? Wa.me/6590090001
 ╠═〘 INFO BOT 〙 ═
 `.trim(), m)
 }
