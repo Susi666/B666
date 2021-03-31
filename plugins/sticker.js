@@ -15,7 +15,7 @@ let handler  = async (m, { conn, args }) => {
     })
   }
 }
-handler.help = ['stiker (Manda la foto y luego etiquetas)', 'stiker <Escribe el url de la foto>']
+handler.help = ['stiker ᴹᵃⁿᵈᵃ ˡᵃ ᶠᵒᵗᵒ ʸ ˡᵘᵉᵍᵒ ᵉᵗᶦᑫᵘᵉᵗᵃˢ', 'stiker ᴱˢᶜʳᶦᵇᵉ ᵉˡ ᵘʳˡ ᵈᵉ ˡᵃ ᶠᵒᵗᵒ']
 handler.tags = ['sticker']
 handler.command = /^stic?ker$/i
 handler.owner = false
